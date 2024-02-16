@@ -3,19 +3,24 @@
 //  murmr
 //
 //  Created by Sam on 17/12/2023.
-//
 
 import SwiftUI
 
 struct ContentView: View {
+    @State private var searchText = ""
+    @State private var isExpanded = true
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            VStack {
+//                Header()
+                murmrList()
+                recordButton()
+            }
         }
-        .padding()
+        .ignoresSafeArea(.keyboard)
+        .preferredColorScheme(.dark)
+        
     }
 }
 
