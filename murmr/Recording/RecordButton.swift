@@ -13,7 +13,8 @@ struct recordButton: View {
     @State private var recordingNameInput = ""
     @State private var usernameDestination = ""
     @ObservedObject var recorderModel: RecorderViewModel = RecorderViewModel()
-
+    @ObservedObject var storage: SupaStorageViewModel = SupaStorageViewModel.shared
+    
     var body: some View {
         HStack {
             Button(action: {
@@ -35,7 +36,8 @@ struct recordButton: View {
             .alert("New Murmr", isPresented: $isSaving) {
                 TextField("Recording name", text: $recordingNameInput).textInputAutocapitalization(.never).foregroundColor(.black)
                 TextField("Send to", text: $usernameDestination).textInputAutocapitalization(.never).foregroundColor(.black)
-
+                
+                // Cancel button
                 Button(action: {
                     recorderModel.cancelRecording()
                     
@@ -45,12 +47,38 @@ struct recordButton: View {
                     Text("Cancel").foregroundColor(Color.red)
                 })
                 
+                // Save button
                 Button("Save") {
-                    recorderModel.stopRecording(name: recordingNameInput)
-                    
-                    isSaving = false
-                    recordingNameInput = ""
-                    usernameDestination = ""
+                    Task {
+                        do {
+                            let filePath = try recorderModel.stopRecording(name: recordingNameInput)
+                            let fileData = try Utils.getFile(filePath: filePath)
+                            
+                            /* For testing purposes */
+                            try Utils.writeDataToTmpFile(data: fileData, fileName: "unencrypted-data.m4a")
+                            
+                            try await storage.uploadFile(fileName: recordingNameInput,
+                                                   fileData: fileData,
+                                                   fileRecipient: usernameDestination)
+                            
+                            print("Deleting file...")
+//                            try? Utils.deleteFile(filePath: filePath)
+                            
+                        } catch let error {
+                            print(error)
+                            
+                            let _ = Alert(
+                                title: Text("Sorry, something broke!"),
+                                message: Text(error.localizedDescription),
+                                dismissButton: .default(Text("Dismiss"))
+                            )                            
+//                            Utils.deleteFile(filePath: filePath)
+                        }
+                        
+                        isSaving = false
+                        recordingNameInput = ""
+                        usernameDestination = ""
+                    }
                 }
             }
         }

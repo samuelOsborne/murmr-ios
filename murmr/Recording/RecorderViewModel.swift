@@ -34,7 +34,7 @@ class RecorderViewModel : NSObject, ObservableObject, AVAudioPlayerDelegate {
         }
         
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-//        let currDate = Date().formatted(date: .abbreviated, time: .shortened)
+        //        let currDate = Date().formatted(date: .abbreviated, time: .shortened)
         let filename = path.appendingPathComponent("murmr-tmp.m4a")
         
         let settings = [
@@ -72,37 +72,38 @@ class RecorderViewModel : NSObject, ObservableObject, AVAudioPlayerDelegate {
         isRecording = false
     }
     
-    func stopRecording(name: String) {
+    func stopRecording(name: String) throws -> URL {
         audioRecorder.stop()
         
         recordingsList.append(Recording(id: UUID(), fileURL : audioRecorder.url, createdAt:getFileDate(for: audioRecorder.url), isPlaying: false, name: "\(name)"))
         
         isRecording = false
         
-        do {
-            let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-            let documentDirectory = URL(fileURLWithPath: path)
-            //            let currDate = Date().formatted(date: .abbreviated, time: .shortened)
-            
-            let originPath = documentDirectory.appendingPathComponent("murmr-tmp.m4a")
-            
-            // Convert to base64
-//            if let fileData = try? Data(contentsOf: originPath, options: .mappedIfSafe) {
-//                let base64String = fileData.base64EncodedString(options: .init(rawValue: 0))
-//                print(base64String)
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        let documentDirectory = URL(fileURLWithPath: path)
+        //            let currDate = Date().formatted(date: .abbreviated, time: .shortened)
+        
+        let originPath = documentDirectory.appendingPathComponent("murmr-tmp.m4a")
+        
+        // Convert to base64
+//        if let fileData = try? Data(contentsOf: originPath, options: .mappedIfSafe) {
+//            let base64String = fileData.base64EncodedString(options: .init(rawValue: 0))
+//            print(base64String)
 //
-//                try base64String.write(to: originPath, atomically: true, encoding: .utf8)
-//            } else {
-//                print("Error reading file data")
-//            }
-            
-            let destinationPath = documentDirectory.appendingPathComponent("murmr-\(name.trimmingCharacters(in: .whitespacesAndNewlines)).m4a")
-            try FileManager.default.moveItem(at: originPath, to: destinationPath)
-            
-            print("Moved file to : \(destinationPath)")
-        } catch {
-            print(error)
-        }
+//            try base64String.write(to: originPath, atomically: true, encoding: .utf8)
+//        } else {
+//            print("Error reading file data")
+//        }
+        
+        let destinationPath = documentDirectory.appendingPathComponent("murmr-\(name.trimmingCharacters(in: .whitespacesAndNewlines)).m4a")
+        
+        try? FileManager.default.removeItem(at: destinationPath)
+        try FileManager.default.moveItem(at: originPath, to: destinationPath)
+        
+        print("Moved file to : \(destinationPath)")
+        
+        return (destinationPath)
+        
     }
     
     func getFileDate(for file: URL) -> Date {

@@ -16,7 +16,24 @@
 		2212B5D22B3AF862006B41EF /* MurmrBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2212B5D12B3AF862006B41EF /* MurmrBlock.swift */; };
 		2212B5D42B3AFB1F006B41EF /* MurmrItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2212B5D32B3AFB1F006B41EF /* MurmrItem.swift */; };
 		2212B5D82B3B025A006B41EF /* ColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2212B5D72B3B025A006B41EF /* ColorHex.swift */; };
-		223FD2B82B696BE10019075E /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223FD2B72B696BE10019075E /* Header.swift */; };
+		224BEE2E2B7FAE4A005281EB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BEE2B2B7FAE4A005281EB /* LoginView.swift */; };
+		224BEE2F2B7FAE4A005281EB /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BEE2C2B7FAE4A005281EB /* SignupView.swift */; };
+		224BEE382B7FAF59005281EB /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BEE372B7FAF59005281EB /* KeyManager.swift */; };
+		224BEE852B7FAF7D005281EB /* SupaDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BEE3B2B7FAF7C005281EB /* SupaDatabase.swift */; };
+		224BEE862B7FAF7D005281EB /* DatabaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BEE3C2B7FAF7C005281EB /* DatabaseViewModel.swift */; };
+		224BEEA82B7FAF7D005281EB /* SupabaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BEE752B7FAF7C005281EB /* SupabaseAuth.swift */; };
+		224BEEA92B7FAF7D005281EB /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BEE762B7FAF7C005281EB /* AuthViewModel.swift */; };
+		224BEEAA2B7FAF7D005281EB /* SupaStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BEE782B7FAF7C005281EB /* SupaStorage.swift */; };
+		224BEEAB2B7FAF7D005281EB /* SupaStorageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BEE792B7FAF7C005281EB /* SupaStorageViewModel.swift */; };
+		224BEEAC2B7FAF7D005281EB /* SupaClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BEE7A2B7FAF7C005281EB /* SupaClient.swift */; };
+		224BEEAD2B7FAF7D005281EB /* DatabaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BEE7B2B7FAF7C005281EB /* DatabaseModels.swift */; };
+		224BEEB32B7FB09B005281EB /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BEEB22B7FB09B005281EB /* NavigationViewModel.swift */; };
+		224BEEB62B7FC922005281EB /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BEEB52B7FC922005281EB /* Profile.swift */; };
+		224BEEBB2B810B49005281EB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BEEBA2B810B49005281EB /* Utils.swift */; };
+		224BEEBD2B8111B2005281EB /* EncryptManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224BEEBC2B8111B2005281EB /* EncryptManager.swift */; };
+		224BEEC02B8134B4005281EB /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 224BEEBF2B8134B4005281EB /* CryptoSwift */; };
+		225F55A82B88ABEA0070C2DD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225F55A72B88ABEA0070C2DD /* Config.swift */; };
+		225F55AB2B88AC2E0070C2DD /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 225F55AA2B88AC2E0070C2DD /* Config.plist */; };
 		226D783B2B2F01DC00EABB37 /* MurmrApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D783A2B2F01DC00EABB37 /* MurmrApp.swift */; };
 		226D783D2B2F01DC00EABB37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D783C2B2F01DC00EABB37 /* ContentView.swift */; };
 		226D783F2B2F01DD00EABB37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 226D783E2B2F01DD00EABB37 /* Assets.xcassets */; };
@@ -62,7 +79,23 @@
 		2212B5D12B3AF862006B41EF /* MurmrBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurmrBlock.swift; sourceTree = "<group>"; };
 		2212B5D32B3AFB1F006B41EF /* MurmrItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurmrItem.swift; sourceTree = "<group>"; };
 		2212B5D72B3B025A006B41EF /* ColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHex.swift; sourceTree = "<group>"; };
-		223FD2B72B696BE10019075E /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		224BEE2B2B7FAE4A005281EB /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		224BEE2C2B7FAE4A005281EB /* SignupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		224BEE372B7FAF59005281EB /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
+		224BEE3B2B7FAF7C005281EB /* SupaDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupaDatabase.swift; sourceTree = "<group>"; };
+		224BEE3C2B7FAF7C005281EB /* DatabaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseViewModel.swift; sourceTree = "<group>"; };
+		224BEE752B7FAF7C005281EB /* SupabaseAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupabaseAuth.swift; sourceTree = "<group>"; };
+		224BEE762B7FAF7C005281EB /* AuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		224BEE782B7FAF7C005281EB /* SupaStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupaStorage.swift; sourceTree = "<group>"; };
+		224BEE792B7FAF7C005281EB /* SupaStorageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupaStorageViewModel.swift; sourceTree = "<group>"; };
+		224BEE7A2B7FAF7C005281EB /* SupaClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupaClient.swift; sourceTree = "<group>"; };
+		224BEE7B2B7FAF7C005281EB /* DatabaseModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseModels.swift; sourceTree = "<group>"; };
+		224BEEB22B7FB09B005281EB /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
+		224BEEB52B7FC922005281EB /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		224BEEBA2B810B49005281EB /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		224BEEBC2B8111B2005281EB /* EncryptManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptManager.swift; sourceTree = "<group>"; };
+		225F55A72B88ABEA0070C2DD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		225F55AA2B88AC2E0070C2DD /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		226D78372B2F01DC00EABB37 /* murmr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = murmr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		226D783A2B2F01DC00EABB37 /* MurmrApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurmrApp.swift; sourceTree = "<group>"; };
 		226D783C2B2F01DC00EABB37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +123,7 @@
 				226D78662B2F023E00EABB37 /* Auth in Frameworks */,
 				226D786E2B2F023E00EABB37 /* Storage in Frameworks */,
 				226D786C2B2F023E00EABB37 /* Realtime in Frameworks */,
+				224BEEC02B8134B4005281EB /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +159,7 @@
 		2212B5CC2B3AF71C006B41EF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				224BEEB42B7FC917005281EB /* Profile */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,16 +192,83 @@
 		223FD2B32B6969650019075E /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				224BEE2B2B7FAE4A005281EB /* LoginView.swift */,
+				224BEE2C2B7FAE4A005281EB /* SignupView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
 		};
-		223FD2B62B696BD10019075E /* Header */ = {
+		224BEE362B7FAF3F005281EB /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
-				223FD2B72B696BE10019075E /* Header.swift */,
+				224BEE372B7FAF59005281EB /* KeyManager.swift */,
+				224BEEBC2B8111B2005281EB /* EncryptManager.swift */,
 			);
-			path = Header;
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		224BEE392B7FAF7C005281EB /* Supabase */ = {
+			isa = PBXGroup;
+			children = (
+				224BEE3A2B7FAF7C005281EB /* Database */,
+				224BEE742B7FAF7C005281EB /* Auth */,
+				224BEE772B7FAF7C005281EB /* Storage */,
+				224BEE7A2B7FAF7C005281EB /* SupaClient.swift */,
+				224BEE7B2B7FAF7C005281EB /* DatabaseModels.swift */,
+			);
+			path = Supabase;
+			sourceTree = "<group>";
+		};
+		224BEE3A2B7FAF7C005281EB /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				224BEE3B2B7FAF7C005281EB /* SupaDatabase.swift */,
+				224BEE3C2B7FAF7C005281EB /* DatabaseViewModel.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		224BEE742B7FAF7C005281EB /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				224BEE752B7FAF7C005281EB /* SupabaseAuth.swift */,
+				224BEE762B7FAF7C005281EB /* AuthViewModel.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		224BEE772B7FAF7C005281EB /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				224BEE782B7FAF7C005281EB /* SupaStorage.swift */,
+				224BEE792B7FAF7C005281EB /* SupaStorageViewModel.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		224BEEB42B7FC917005281EB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				224BEEB52B7FC922005281EB /* Profile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		224BEEB92B810B3F005281EB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				224BEEBA2B810B49005281EB /* Utils.swift */,
+				225F55A72B88ABEA0070C2DD /* Config.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		225F55A92B88ABF70070C2DD /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				225F55AA2B88AC2E0070C2DD /* Config.plist */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 		226D782E2B2F01DC00EABB37 = {
@@ -192,7 +294,10 @@
 		226D78392B2F01DC00EABB37 /* murmr */ = {
 			isa = PBXGroup;
 			children = (
-				223FD2B62B696BD10019075E /* Header */,
+				225F55A92B88ABF70070C2DD /* SupportFiles */,
+				224BEEB92B810B3F005281EB /* Utils */,
+				224BEE392B7FAF7C005281EB /* Supabase */,
+				224BEE362B7FAF3F005281EB /* Crypto */,
 				223FD2B32B6969650019075E /* Login */,
 				22C357A62B44477A00D19363 /* Recording */,
 				2212B5D62B3B024B006B41EF /* Services */,
@@ -205,6 +310,7 @@
 				226D783C2B2F01DC00EABB37 /* ContentView.swift */,
 				226D783E2B2F01DD00EABB37 /* Assets.xcassets */,
 				226D78402B2F01DD00EABB37 /* Preview Content */,
+				224BEEB22B7FB09B005281EB /* NavigationViewModel.swift */,
 			);
 			path = murmr;
 			sourceTree = "<group>";
@@ -267,6 +373,7 @@
 				226D786B2B2F023E00EABB37 /* Realtime */,
 				226D786D2B2F023E00EABB37 /* Storage */,
 				226D786F2B2F023E00EABB37 /* Supabase */,
+				224BEEBF2B8134B4005281EB /* CryptoSwift */,
 			);
 			productName = murmr;
 			productReference = 226D78372B2F01DC00EABB37 /* murmr.app */;
@@ -342,6 +449,7 @@
 			mainGroup = 226D782E2B2F01DC00EABB37;
 			packageReferences = (
 				226D78642B2F023E00EABB37 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				224BEEBE2B8134B4005281EB /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 			);
 			productRefGroup = 226D78382B2F01DC00EABB37 /* Products */;
 			projectDirPath = "";
@@ -360,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				226D78422B2F01DD00EABB37 /* Preview Assets.xcassets in Resources */,
+				225F55AB2B88AC2E0070C2DD /* Config.plist in Resources */,
 				226D783F2B2F01DD00EABB37 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,20 +494,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				224BEEAB2B7FAF7D005281EB /* SupaStorageViewModel.swift in Sources */,
+				224BEEBD2B8111B2005281EB /* EncryptManager.swift in Sources */,
+				224BEEAD2B7FAF7D005281EB /* DatabaseModels.swift in Sources */,
 				22C357AC2B44499900D19363 /* RecordButton.swift in Sources */,
 				2212B5CB2B385D98006B41EF /* AudioBarView.swift in Sources */,
 				2212B5CF2B3AF7CC006B41EF /* MurmrList.swift in Sources */,
+				224BEEBB2B810B49005281EB /* Utils.swift in Sources */,
 				2212B5D42B3AFB1F006B41EF /* MurmrItem.swift in Sources */,
 				226D783D2B2F01DC00EABB37 /* ContentView.swift in Sources */,
+				224BEE2F2B7FAE4A005281EB /* SignupView.swift in Sources */,
 				2212B5D22B3AF862006B41EF /* MurmrBlock.swift in Sources */,
 				2212B5C92B385D1A006B41EF /* Extensions.swift in Sources */,
 				2212B5D82B3B025A006B41EF /* ColorHex.swift in Sources */,
+				224BEEAA2B7FAF7D005281EB /* SupaStorage.swift in Sources */,
 				22C357AA2B4447B300D19363 /* Recording.swift in Sources */,
 				22C357A82B44479500D19363 /* RecorderViewModel.swift in Sources */,
-				223FD2B82B696BE10019075E /* Header.swift in Sources */,
+				224BEE862B7FAF7D005281EB /* DatabaseViewModel.swift in Sources */,
+				225F55A82B88ABEA0070C2DD /* Config.swift in Sources */,
 				2212B5C52B385C6E006B41EF /* Service.swift in Sources */,
+				224BEEB62B7FC922005281EB /* Profile.swift in Sources */,
+				224BEE382B7FAF59005281EB /* KeyManager.swift in Sources */,
+				224BEEA82B7FAF7D005281EB /* SupabaseAuth.swift in Sources */,
+				224BEE852B7FAF7D005281EB /* SupaDatabase.swift in Sources */,
+				224BEEAC2B7FAF7D005281EB /* SupaClient.swift in Sources */,
 				226D783B2B2F01DC00EABB37 /* MurmrApp.swift in Sources */,
+				224BEEA92B7FAF7D005281EB /* AuthViewModel.swift in Sources */,
+				224BEEB32B7FB09B005281EB /* NavigationViewModel.swift in Sources */,
 				2212B5C32B385C15006B41EF /* AudioPreviewModel.swift in Sources */,
+				224BEE2E2B7FAE4A005281EB /* LoginView.swift in Sources */,
 				2212B5C72B385CD7006B41EF /* AudioPlayViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -739,6 +863,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		224BEEBE2B8134B4005281EB /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.1;
+			};
+		};
 		226D78642B2F023E00EABB37 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/supabase/supabase-swift.git";
@@ -750,6 +882,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		224BEEBF2B8134B4005281EB /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 224BEEBE2B8134B4005281EB /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
 		226D78652B2F023E00EABB37 /* Auth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 226D78642B2F023E00EABB37 /* XCRemoteSwiftPackageReference "supabase-swift" */;

@@ -7,23 +7,33 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var searchText = ""
-    @State private var isExpanded = true
+    @ObservedObject private var authViewModel : AuthViewModel = AuthViewModel.shared
+    @ObservedObject private var navigationViewModel : NavigationViewModel = NavigationViewModel.shared
     
     var body: some View {
-        ZStack {
-            VStack {
+        Group {
+            switch (authViewModel.authState) {
+            case .Initial:
+                Text("Loading")
+            case .SignIn:
+                //                HomeView()
 //                Header()
-                murmrList()
-                recordButton()
+                ZStack {
+                    VStack {
+                        murmrList()
+                        recordButton()
+                    }
+                }
+                .ignoresSafeArea(.keyboard)
+                .preferredColorScheme(.dark)
+
+            case .SignOut:
+                Text("Sign out")
+                LoginView()
             }
         }
-        .ignoresSafeArea(.keyboard)
-        .preferredColorScheme(.dark)
-        
+        .task {
+            await authViewModel.isUserSignIn()
+        }
     }
-}
-
-#Preview {
-    ContentView()
 }
